@@ -83,13 +83,10 @@ def detect_faces(our_image):
   # get name
   class_index = yhat_class[0]
   class_probability = yhat_prob[0,class_index] * 100
-  if(class_probability>75):
-    predict_names = out_encoder.inverse_transform(yhat_class)
-    attendance_percentage = mark_attendance(predict_names[0])
-    s=(f'You are recognized as: {predict_names[0]} with {round(class_probability,2)}% accuracy and your attendance is updated to: {attendance_percentage}%')
-    return s
-  else:
-    return "Failed to recognize you with accuracy >75% rescan your image for marking attendence or register yourself first"
+  predict_names = out_encoder.inverse_transform(yhat_class)
+  attendance_percentage = mark_attendance(predict_names[0])
+  s=(f'You are recognized as: {predict_names[0]} with {round(class_probability,2)}% accuracy and your attendance is updated to: {attendance_percentage}%')
+  return s
 
  #Main function =================================================================================== 
 def main():
