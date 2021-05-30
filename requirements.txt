@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+tensorflow
+opencv-python
+opencv-contrib-python
+scikit-learn == 0.22.1
