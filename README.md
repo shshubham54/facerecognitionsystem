@@ -1,5 +1,6 @@
 # FaceRecognitionUsingStreamLit
-##Objective: 
+
+## Objective: 
 Smart attendance system removes the cumbersome task of marking the attendance of the attendees by calling out everyone's name. 
 
 ## Problem Statement: 
