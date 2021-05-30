@@ -60,7 +60,7 @@ def mark_attendance(name):
   sheet = pd.read_csv("data/attendance.csv")
   if(d1 not in sheet):
     sheet[d1]=0
-  child = 'dev'
+  child = name
   row_index = np.where(sheet['Name']==child)[0][0]
   sheet.at[row_index,d1] = 1
   sheet.to_csv("data/attendance.csv", index=False)
